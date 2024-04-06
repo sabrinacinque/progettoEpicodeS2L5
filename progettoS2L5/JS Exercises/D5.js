@@ -32,9 +32,9 @@ console.log(pets); se faccio così , mi stampa l'array in console(su una sola ri
     Scrivi del codice per stampare nuovamente in console gli elementi dell'array "pets", questa volta in ordine invertito.
 */
 //RISPOSTA 3
-/* 
-pets.reverse();
-console.log(pets);       //così stampa su una sola riga in console
+ 
+/* pets.reverse();
+console.log(pets);      //così stampa su una sola riga in console
 for (let i = 0 ; i < pets.length ; i++){
   console.log(pets[i]);    //così stampa ogni singolo elemento,su righe diverse in console
 }*/
@@ -77,12 +77,12 @@ const cars = [
     trims: ['life', 'style', 'r-line'],
   },
 ]
-console.log(cars);
+
 
 //RISPOSTA5
 
 for (let i = 0; i < cars.length; i++) {
-  cars[i].licensePlate = Math.floor(Math.random() * 100000); //ho pensato di farmi associare un numero casuale diverso di 5 cifre per ogni targa
+  cars[i].licensePlate = Math.floor(Math.random() * 100000); //ho pensato di farmi associare un numero casuale di 5 cifre diverso per ogni targa
 }
 console.log(cars);
 
@@ -124,9 +124,9 @@ console.log(justTrims);
 
 let messaggio = "";          //creo prima una variabile messaggio        
 for (let i = 0 ; i < cars.length ; i++){
-  firstLetter = cars[i].color.slice(0,1); //qua gli dico "prendimi ogni prima lettera del valore del colore per ogni elemento dell'array" 
-  if(firstLetter === "b"){                //e lo racchiudo in na variabile così è più ordinato fare il confronto nell'if
-    messaggio = "Fizz";
+  firstLetter = cars[i].color.slice(0,1); //qua gli dico "prendimi ogni prima lettera del valore del colore per ogni elemento[i] dell'array" 
+  if(firstLetter === "b"){                //e lo racchiudo in una variabile così è più ordinato fare il confronto nell'if
+    messaggio = "Fizz";                   //se la prima lettera è uguale a "b", scrivimi Fizz nel messaggio ,altrimenti scrivimi Buzz
   }else{
     messaggio = "Buzz";
   }
@@ -170,10 +170,10 @@ let charactersArrayNumber = [];
 
 for (let i = 0; i < charactersArray.length; i++) {
   let valore = 0;
-  switch (charactersArray[i]) {
-    case 'd':
-      charactersArrayNumber.push(valore = 4);
-      break;
+  switch (charactersArray[i]) {               //Qui gli sto dicendo: cicla dentro l'array charactesArray e controlla ogni valore:
+    case 'd':                                 //nel caso in cui incontri la d , spingimi dentro l'array vuoto charactersArrayNumber un elemento a cui ho assegnato valore di 4
+      charactersArrayNumber.push(valore = 4); //e fai questo per tutta la lunghezza nel codice: in base ai "case" mi spingi dentro il secondo array il valore corrispondente
+      break;                                  //Quando hai finito tutto il ciclo for, esci e stampami il nuovo array compilato
     case 'g':
       charactersArrayNumber.push(valore = 7);
       break;
@@ -187,7 +187,7 @@ for (let i = 0; i < charactersArray.length; i++) {
       charactersArrayNumber.push(valore = 26);
       break; 
   }
-  charactersArrayNumber[i] = valore;
+  
 }
 
 console.log(charactersArrayNumber);
