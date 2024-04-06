@@ -1,0 +1,229 @@
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    background-color: #dbddde;
+}
+
+a{
+    text-decoration: none;/*tutti i link presenti nella pagina non hanno la linea sotto(tranne quello del foooter),quindi imposto il none su tutti direttamente*/
+}/* IMPORTANTE:dato che gli <a> non hanno il sottolineato, ho ipotizzato degli "hover" per ciascun <a> in modo che si capisce che lì si può cliccare*/
+
+
+.bgBlue{ /*classe che richiamo anche nel footer*/
+    background-color:#222f3f;   
+}
+
+header div img{
+    width: 6rem;
+    padding: 0.5rem 0 0.5rem 1.2rem;
+}
+
+header div img:hover{
+    border: 1px solid white;/*ho visto sulla pagina di amazon che quando clicchi sul logo e sulla navbar in alto, 
+                               si fa un quadrato attorno .Lo metto anche nel logo del footer e sulle <a> della nav
+                               ps=non ho fatto una classe dedicata perchè spesso le cose di interesse non le richiamo con la classe
+                               ma con il "percorso" ,tipo footer img*/
+}
+
+
+
+nav {
+    background-color:#364759;
+    padding: 0.4rem 0 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li{
+    float: left;
+    padding-left: 1.2rem;
+}
+
+nav ul li a{
+    color:white;
+    
+}
+
+nav ul li a:hover {
+    border: 1px solid white;
+    font-size: 1rem; 
+}
+/*************************************************INIZIO MAIN**********************************/
+main{ /*tranne header e footer, poi il corpo della pagina ha un margin sia a destra che a sinistra e lo imposto direttamente sul main*/
+    margin: 0 1.2rem;
+}
+
+/******************************PRIMO DIV DEL MAIN*******************/
+#orangeID{
+    background-color:#f56600 ;
+    margin: 1rem 0;
+    padding: 0.4rem 0;
+    text-align: center;
+}
+
+#orangeID a{
+    color:#ffebc2;
+    
+}
+
+#orangeID a:hover{
+    font-size: 1rem;
+    
+}
+
+
+
+/******************************SECONDO DIV DEL MAIN*******************/
+
+#presentID{
+    text-align: center;
+    background-image:url(../images/bg-image.png); 
+    padding: 5rem 0 3rem;
+    background-size: auto; /* dal mockup si evince che l'immagine di sfondo è ripetuta sia sull'asse x che sull'asse y e non è "centrata"
+                              diciamo che la visualizzazione dello sfondo come il mockup,lo si può vedere a 1400px circa. Se allargo o restringo la finestra,
+                              ovviamente la ripetizione dello sfondo cambia. Sarebbe stato diverso se avessi potuto far prendere allo sfondo tutta
+                              la dimensione del div che lo ospita...ma non avrei osservato le disposizioni che si evincono dalla foto... */
+}
+
+#presentID:hover{
+    background-image:url(../images/bg-img.png);
+}
+
+#presentID:hover a, /*gli sto dicendo che quando passo il mouse su #presentID,non solo gli ho cambiato lo sfondo, */
+#presentID:hover p {  /*ma devo cambiare anche il colore delle scritte perchè sono bianche, e sullo sfondo chiaro non si vedrebbero...*/
+    color: black;
+}
+
+#presentID a{
+    color:white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+
+#presentID a:hover{
+    font-size: 2.5rem;
+}
+
+
+
+#presentID p{
+    color:white;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/**********************************PRIMO SECTION DEL MAIN***************************************/
+
+#photos {
+    margin: 1.2rem 0;
+    padding: 1.2rem 0;
+    background-color: white;
+    overflow: hidden; /* Clearfix per contenere i floated elements */
+}
+
+.p{
+    font-size: 1.3rem;
+    padding-left: 1.2rem;
+}
+
+.shopNow {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #025857;
+    margin-left: 1.5rem;
+}
+
+.shopNow:hover {
+    font-size: 1.3rem;
+}
+
+#photos ul {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+#photos ul li {
+    float: left;
+    width: 22%; /* Imposto la larghezza delle immagini e lo spazio tra di loro */
+    margin: 0 1%; 
+    box-sizing: border-box;
+}
+
+#photos ul li:first-child {
+    margin-left: 3%; /* Aggiunge uno spazio extra a sinistra della prima foto */
+}
+
+#photos ul li:last-child {
+    margin-right: 3%; /* Aggiunge uno spazio extra a destra dell'ultima foto */
+}
+
+.imgSection {
+    border-radius: 7%;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.largeImg:hover,     /*imposto un hover comune tra le immagini di questa section e quelle della section di sotto,*/
+.imgSection:hover {  /*così per far capire che sono cliccabili,le rendo opache quando si passa il mouse sopra*/
+    opacity: 0.6;
+}
+/************************************SECTION IMMAGINI LARGHE*******************************************************/
+
+
+figcaption{
+    text-align: center;
+
+} 
+
+.largeImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.containerLargeImg{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/**********************************FOOTER************************************************/
+
+footer{
+    text-align: center;
+}
+footer div{
+    background-color: #364759;
+    padding: 1rem;
+}
+
+footer a{
+    color: white;
+    text-decoration: underline;/*solo per questo link, rimetto il sottolineato(che avevto tolto dagli <a> ad inizio pagina*/
+    font-size: 1rem;    
+}  
+
+footer a:hover{
+    color: rgb(140, 21, 213);
+    font-size: 1.3rem;
+}
+
+footer img{
+    width: 9rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+footer img:hover{
+    border: 1px solid white;
+}
+    
+    
